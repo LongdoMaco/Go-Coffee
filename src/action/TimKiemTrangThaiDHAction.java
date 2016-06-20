@@ -1,0 +1,58 @@
+package action;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.bean.ChiTietDonHang;
+import model.bo.DonHangBO;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import form.DanhSachDonHangForm;
+import form.LoginForm;
+
+public class TimKiemTrangThaiDHAction extends Action {
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		DanhSachDonHangForm DanhSachDonHangForm = (DanhSachDonHangForm) form;
+		String timkiem="";
+		DonHangBO DonHangBO= new DonHangBO();
+		ChiTietDonHang ChiTietDonHang= new ChiTietDonHang();
+		ArrayList<ChiTietDonHang> listchitietdonhang;
+		//Lay chuoi tim kiem
+		int trangthaitk = DanhSachDonHangForm.getTrangthaitk();
+		 if(trangthaitk==1){
+			 timkiem ="TT01";
+		}
+		else if(trangthaitk==2){
+			 timkiem ="TT02";
+		}
+		else if(trangthaitk==3){
+			 timkiem ="TT03";
+		}
+		else if(trangthaitk==4){
+			 timkiem ="TT04";
+		}
+		else{
+			 timkiem ="";
+		}
+		//System.out.println("tim kiem"+timkiem);
+		//Lay quyen và username
+		HttpSession httpSession = request.getSession();
+		LoginForm loginForm = (LoginForm) httpSession.getAttribute("loginForm");
+		int quyenmoi=loginForm.getQuyenHan();
+		String username = loginForm.getUserName();
+		
+		//Lay thong tin danh sach don hang
+		listchitietdonhang= DonHangBO.layDanhSachTrangThaiTK(quyenmoi,timkiem);
+		DanhSachDonHangForm.setListchitietdonhang(listchitietdonhang);
+		return mapping.findForward("danhsach");
+	}
+}

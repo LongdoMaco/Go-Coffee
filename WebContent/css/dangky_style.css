@@ -1,0 +1,43 @@
+body{
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.center{
+  margin:30px 10px;
+  width: 100%;
+  height: 625px;
+  margin: 10px auto;
+
+}
+.center .left{
+  
+  height: 530px;
+}
+.center .right h3{
+  color: green;
+  font-style: bold;
+  font-size: 25px;
+  margin-top: -16px;
+  background-color: white;
+  padding-left: 10px;
+  width: 110px;
+}
+.center .left h4{
+  color: yellow;
+  font-size: 19px;
+  
+  
+}
+.center .left img{
+  height: 500px;
+  width: 95%;
+  padding-top: 40px;
+}
+.center .right{
+  
+  height: 570px;
+  padding-left:40px;
+  
+}

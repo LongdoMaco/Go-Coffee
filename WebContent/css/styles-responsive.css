@@ -1,0 +1,104 @@
+
+@media (max-width: 992px){
+	.flex-control-nav{
+		width: 740px;
+		margin-left: -400px;
+	}
+	.flexslider .item .bg{
+		width: 740px;
+	}
+	header .logo h1 {
+	  text-align: center;
+	  margin-bottom: 10px;
+	}
+	header .menu{
+		padding-right: 0;
+		text-align: center;
+		margin: 0;
+	}
+	.flexslider .item{
+		height: 400px;
+	}
+	.main .sidebar .buy-phone {
+	  padding: 34px 0;
+	  text-align: center;
+	}
+	.main .sidebar .buy-phone:before{
+		display: none;
+	}
+	.sidebar{
+		.title a{
+			font-size: 14px;
+		}
+	}
+	.main .product .intro{
+		margin-bottom: 0;
+	}
+	footer .col-md-7{
+		text-align: left;
+	}
+	footer#footer .col-md-7 ul li:first-child a{
+		margin: 0;
+		padding: 0;
+	}
+	footer#footer .col-md-7 ul{
+		margin: 0;
+		margin-top: 5px;
+	}
+}
+@media (max-width: 768px){
+	.flexslider .item .bg{
+		width: 100% !important;
+	}
+	.flex-control-nav{
+		display: none;
+	}
+	header .top{
+		height: 35px;
+	}
+	header .top a{
+		line-height: 35px;
+	}
+	header .top {
+	  position: fixed;
+	  width: 100%;
+	  z-index: 999;
+	}
+	.main .container .row{
+		>bg{
+			float: inherit;
+			width: inherit;
+		}
+	}
+	.main .sidebar .ads img{
+		width: inherit;
+		max-width: 100%;
+	}
+}
+@media (max-width: 480px){
+	.flexslider .item .bg .col-xs-6{
+		width: 80%;
+	}
+	.main .product .intro .row .col-sm-4{
+		width: 100%;
+	}
+	footer#footer .col-md-7 ul li{
+		display: block;
+	}
+	footer#footer .col-md-7 ul li a{
+		padding-left: 0;
+		margin: 0;
+	}
+	footer#footer .col-md-7 ul li a:hover{
+		background: 0;
+	}
+	.main .product .list-product .list .col-md-4{
+		width: 80%;
+		margin-left: 10%;
+	}
+}
+@media (max-width: 420px){
+	header .top a{
+		display: none;
+	}
+}
